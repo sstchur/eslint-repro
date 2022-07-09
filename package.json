@@ -1,0 +1,17 @@
+{
+  "name": "example-rule",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.30.5",
+    "@typescript-eslint/type-utils": "^5.30.5",
+    "@typescript-eslint/utils": "^5.30.5"
+  }
+}
