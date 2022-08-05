@@ -16,6 +16,7 @@ const errors = [{ messageId: 'noUnstrictEqauals' }];
 ruleTester.run('no-unnecessary-explicit-falsy-checks', noUnstrictEquals, {
   valid: [
     {
+      options: [ "===", "!==" ],
       code: `let n: number;
             if (n === 7) {};`
     }

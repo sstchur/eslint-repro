@@ -18,6 +18,6 @@
       "forceConsistentCasingInFileNames": true,
       "importHelpers": true
     },
-    "include": ["./**/*.js"]
+    "include": ["./**/*.js", "file.ts"]
   }
   
