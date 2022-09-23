@@ -28,6 +28,7 @@ module.exports = {
             node,
             messageId: 'someError',
             fix(fixer) {
+              console.log('RUNNING FIXER for', node.parameter.name)
               fixer.replaceText(node, 'public emily: string');
             }
           });
