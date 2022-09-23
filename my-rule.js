@@ -23,13 +23,12 @@ module.exports = {
 
     return {
       TSParameterProperty(node) {
-        console.log(node.parameter.name);
         if (node.parameter.name === 'stephen') {
           context.report({
             node,
             messageId: 'someError',
             fix(fixer) {
-              fixer.replaceText(node, 'emily');
+              fixer.replaceText(node, 'public emily: string');
             }
           });
         }
