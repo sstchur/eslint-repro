@@ -9,9 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-
-  },
+  "devDependencies": {},
   "dependencies": {
     "@typescript-eslint/parser": "^5.30.5",
     "@typescript-eslint/type-utils": "^5.30.5",
