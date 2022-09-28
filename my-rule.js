@@ -23,16 +23,28 @@ module.exports = {
     const checker = parserServices.program.getTypeChecker();
 
     return {
-      TSParameterProperty(node) {
-        if (node.parameter.name === 'stephen') {
+      Identifier(node) {
+        if (node.name === 'A') {
           context.report({
             node,
             messageId: 'someError',
             fix(fixer) {
               return [
                 fixer.replaceTextRange([9,13], '// C'),
-                fixer.replaceTextRange([22,26], '// B')
+                fixer.replaceTextRange([72,73], 'C')
               ]
+            }
+          });
+        }
+        else if (node.name === 'B') {
+          context.report({
+            node,
+            messageId: 'someError',
+            fix(fixer) {
+              return [
+                fixer.replaceTextRange([22,26], '// D'),
+                fixer.replaceTextRange([82,83], 'D')
+              ];
             }
           });
         }

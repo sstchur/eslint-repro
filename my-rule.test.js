@@ -28,14 +28,17 @@ ruleTester.run('my-rule', myRule, {
         // A
         // B
         class Person {
-          constructor(public stephen: string) {}
+          constructor(A: string, B: string) {}
         }`,
-      errors: [ { messageId: 'someError' } ],
+      errors: [
+        { messageId: 'someError' },
+        { messageId: 'someError' } 
+      ],
       output: `
         // C
         // D
         class Person {
-          constructor(public emily: string) {}
+          constructor(C: string, D: string) {}
         }`
     }
   ]
