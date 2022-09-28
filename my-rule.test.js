@@ -25,11 +25,15 @@ ruleTester.run('my-rule', myRule, {
   invalid: [
     {
       code: `
+        // A
+        // B
         class Person {
           constructor(public stephen: string) {}
         }`,
       errors: [ { messageId: 'someError' } ],
       output: `
+        // C
+        // D
         class Person {
           constructor(public emily: string) {}
         }`

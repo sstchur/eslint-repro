@@ -11,6 +11,7 @@ module.exports = {
       category: 'Possible Errors',
       recommended: 'error'
     },
+    fixable: 'code',
     messages: {
       someError:
         'You better fix this code!'
@@ -28,8 +29,10 @@ module.exports = {
             node,
             messageId: 'someError',
             fix(fixer) {
-              console.log('RUNNING FIXER for', node.parameter.name)
-              fixer.replaceText(node, 'public emily: string');
+              return [
+                fixer.replaceTextRange([9,13], '// C'),
+                fixer.replaceTextRange([22,26], '// B')
+              ]
             }
           });
         }
