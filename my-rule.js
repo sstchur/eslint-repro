@@ -43,7 +43,7 @@ module.exports = {
             fix(fixer) {
               return [
                 fixer.replaceTextRange([22,26], '// D'),
-                fixer.replaceTextRange([82,83], 'D')
+                fixer.replaceTextRange([83,84], 'D')
               ];
             }
           });
